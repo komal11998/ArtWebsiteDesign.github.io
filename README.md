@@ -1,1 +1,1 @@
-# ArtWebsiteDesign.github.io
+# artDesign_Website.github.io

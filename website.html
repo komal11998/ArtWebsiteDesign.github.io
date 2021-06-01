@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&tprime;MyWebsite&tprime;</title>
+  <link rel="stylesheet" href="" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      font-family: 'Baloo Bhai 2', cursive;
+      margin: 0;
+      padding: 0;
+      background: url('/images/back.jpg');
+      height: 700px;
+      color: ivory;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .bg-image {
+      /* The image used */
+      background-image: url('/images/back.jpg');
+
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+      font-size: 40px;
+      display: inline-block;
+    }
+
+    .bg-text h1 a {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .bg-text h1 a:hover {
+      color: rgb(82, 4, 4);
+      text-decoration: underline;
+    }
+
+    .bg-text p a {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .left {
+      left: 20px;
+      top: 20px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    .left img {
+      width: 70px;
+      position: sticky;
+    }
+
+    .mid {
+      display: block;
+      width: 30%;
+      margin: 20px auto;
+    }
+
+    .right {
+      right: 20px;
+      top: 20px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    .navbar {
+      color: rgb(102, 111, 124);
+      display: inline-block;
+      position: sticky;
+      cursor: pointer;
+    }
+
+    .navbar li {
+      display: inline-block;
+    }
+
+    .navbar li a {
+      color: rgb(102, 111, 124);
+      text-decoration: none;
+      padding: 34px 10px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+      text-decoration: underline;
+      color: white;
+    }
+
+    .aboutus {
+      margin: 106px 80px;
+      padding: 75px;
+      border-radius: 28px;
+      height: 80%;
+    }
+
+    .aboutus h1 {
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .aboutus p {
+      text-align: center;
+      padding: 20px;
+      text-shadow: white;
+      font-size: 30px;
+    }
+
+    .footer {
+      display: inline-block;
+      width: 100%;
+      margin: 20px auto;
+      padding: 30px auto;
+      padding: 20px;
+      border: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .footer-img {
+      display: inline-block;
+      size: 20px;
+    }
+
+    .footer-img li {
+      display: inline-block;
+    }
+
+    .footer-img li a {
+      padding: 0px 10px;
+      display: inline-block;
+      text-align: center;
+      margin: 0px;
+    }
+
+    .footer-img li a img {
+      width: 50px;
+      border: 2px;
+      border-radius: 150px;
+    }
+
+    .gallery {
+      display: inline-block;
+      width: 100%;
+      margin: 20px auto;
+      padding: 30px auto;
+      padding: 20px;
+      border: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .photos h1 {
+      text-align: center;
+      display: inline-block;
+    }
+
+    .photos li {
+      display: inline-block;
+    }
+
+    .photos li a img {
+      width: 30%;
+      border: 3px solid white;
+
+      border-radius: 150px;
+    }
+
+    .photos li a img:hover {
+      transform: scale(2.2);
+    }
+
+    .contact {
+      text-align: center;
+      height: 60%;
+      background-color: rgba(9, 10, 12, 0.527);
+    }
+
+    .text-center {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .form {
+      max-width: 500px;
+      margin: 42px auto;
+    }
+
+    .form input {
+      width: 100%;
+      padding: 5px;
+      border-radius: 6px;
+      font-size: 19px;
+      border: 2px solid grey;
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 8px 20px;
+      margin: 7px 3px;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 1272px) {
+
+      .bg-text,
+      .left,
+      .left img {
+        flex-direction: column;
+      }
+    }
+
+    /* footer section styling */
+    footer {
+      background: #111;
+      padding: 50px 23px;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    footer span a {
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
+    footer span a:hover {
+      text-decoration: underline;
+    }
+
+    .is-divider-bg-dark {
+      background-color: #fff;
+      opacity: 0.2;
+    }
+
+    .is-divider {
+      width: 100%;
+      height: 1px;
+    }
+
+    footer .icons a {
+      margin-top: 30px;
+      padding: 10px;
+      color: white;
+      transition: all 0.3s ease;
+      font-size: 50px;
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="left">
+    <img src="images/icon.jpg" alt="" />
+  </div>
+  <div class="mid">
+    <ul class="navbar">
+      <li><a href="#HOME" class="active">HOME</a></li>
+      <li><a href="#ABOUT US">ABOUT US</a></li>
+      <li><a href="#GALLERY">GALLERY</a></li>
+      <li><a href="#CONTACT US">CONTACT US</a></li>
+    </ul>
+  </div>
+  <div class="right"></div>
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1>
+      <a href="https://www.instagram.com/_abhishek7696_/?hl=en" _ target="blank">I am Abhishek Singh</a>
+    </h1>
+    <p><a href="https://www.instagram.com/art_life_4u/?hl=en" target="_blank">And I'm an Artist</a>
+    </p>
+  </div>
+  <div class="aboutus" id="ABOUT US">
+    <h1>Just me, myself and I, exploring the universe of art.</h1>
+    <p>
+      “When people ask me what my work is about, I can only answer
+      “EVERYTHING!”. My paintings come from my daily life, and are attempts to
+      make sense of the world. They express my wishes and dreams for a better
+      world, they celebrate happy occasions, my sadness and frustration, as I
+      explore life’s dualities ….”
+    </p>
+  </div>
+  <hr />
+  <div class="gallery" id="GALLERY">
+    <h1>GALLERY</h1>
+    <div class="photos">
+      <li>
+        <a href="https://www.instagram.com/p/CD8NzsxFMpL/" target="blank"><img src="images/dog.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BWuNiC0hq_V/" target="blank"><img src="images/doll.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/CDvyVBrBeJF/" target="blank"><img src="images/eye.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/CDxkhC7Bvve/" target="blank"><img src="images/parrot.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/CD2tXPFB-o_/" target="blank"><img src="images/rose.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BTNySW4hE8f/" target="blank"><img src="images/man.jpeg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BiXAy6vh2In/" target="blank"><img src="images/girl.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BFeMM1dxQyO/" target="blank"><img src="images/cup.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/B_4Hb20lDBr/" target="blank"><img src="images/eye1.jpeg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BJ7DvS9Dz9l/" target="blank"><img src="images/bottle.jpg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/p/BsKIOsNl-vV/" target="blank"><img src="images/cat.jpg" alt="" /></a>
+      </li>
+    </div>
+  </div>
+  <section class="contact" id="CONTACT US">
+    <h2 class="text-center">Do Not Hesitate To Contact Me !!</h2>
+    <div class="form">
+      <input type="text" name="name" id="name" placeholder="Enter Your Name" autocomplete="off" />
+      <input type="email" name="email" id="email" placeholder="Enter Your Email Id" autocomplete="off" />
+      <input type="text" id="Message" textarea="300" placeholder="Your Message" autocomplete="off" />
+      <button class="btn">Send</button>
+    </div>
+  </section>
+
+  <footer>
+    <span>Created By <a href="#home">Komal</a> | <span class="far fa-copyright"> </span> 2020 All rights
+      reserved.</span>
+    <div class="is-divider is-divider-bg-dark"></div>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/komal-0918/" target="_blank"><i class="fa fa-linkedin-square"
+          id="link"></i></a>
+
+      <a href="https://github.com/komal11998" target="_blank"><i class="fa fa-github-square" id="git"></i></a>
+      <a href="https://www.instagram.com/komal0918/" target="_blank"><i class="fa fa-instagram" id="insta"></i></a>
+      <a href="https://join.skype.com/invite/XrPdvu71nvI9" target="_blank"><i class="fa fa-skype" id="sky"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>
